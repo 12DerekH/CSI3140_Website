@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
 
-
 const Login = () => {
     
     const [crendentials, setCredentials] = useState({ email: '', password: ''});
@@ -17,9 +16,9 @@ const Login = () => {
     };
     
     return (
-        <body>
-        <form>
-            <h1>Login</h1>
+        <body class="loginbody">
+        <form class="loginform">
+            <h1 class="logintitle">Login</h1>
             <div class="input">
                 <label>Email</label>
                 <input class="inputField" onChange={(e) => setCredentials({...crendentials, email: e.target.value})} type="text" placeholder='Enter email' name='email' required/>
