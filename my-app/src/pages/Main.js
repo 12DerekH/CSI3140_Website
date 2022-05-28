@@ -12,7 +12,7 @@ const Main = () => {
         event.preventDefault();
 
         //Look for quiz matching quiz code
-        console.log(quizcode);
+        console.log(quizcode)
       }
 
     return (
