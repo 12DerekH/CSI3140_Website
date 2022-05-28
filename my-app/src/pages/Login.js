@@ -30,7 +30,8 @@ const Login = () => {
                 <input class="inputField" onChange={(e) => setCredentials({...crendentials, password: e.target.value})} type="password" placeholder='Enter password' name='password' required/>
             </div>
             <button type='submit' onClick={handleLogin}>Login</button>
-
+            <br></br>
+            <Link exact to='/signup'>Dont have an account? Sign up here</Link>
         </form>
         </body>
     )
