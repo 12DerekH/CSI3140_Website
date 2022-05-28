@@ -1,18 +1,29 @@
 import * as React from 'react';
+import { useState } from 'react';
 import '../styles/Main.css'
 import {Link} from 'react-router-dom';
 
 const Main = () => {
     
+    const [quizcode, setCode] = useState("");
+
+    const handleSubmit = (event) => {
+        setCode(event.target.value);
+        event.preventDefault();
+
+        //Look for quiz matching quiz code
+        console.log(quizcode);
+      }
+
     return (
         <div>
             <a href="/"><img src="https://images.cooltext.com/5603665.png" width="291" height="95" alt="Quizzle" /></a>
-            <div class="container"> 
+            <Link class="login" exact to='/login'>Want to create a quiz? Sign in here</Link>
+            <form class="container"> 
                 <h1>Access a quiz</h1><br/>
-                <Link class="login" exact to='/signup'>Dont have an account? Sign up here</Link>
-                <input class="info" type="text" placeholder="Quiz code"/>
-                <button>Start</button>
-            </div>
+                <input class="info" type="text" placeholder="Quiz code" />
+                <button type='submit' onClick={handleSubmit}>Start</button>
+            </form>
         </div>
     )
 
