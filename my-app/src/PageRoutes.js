@@ -15,7 +15,7 @@ const PageRoutes = () => {
                 <Route exact path="/" element={<Main/>} />
                 <Route exact path="/profile" element={<Profile/>} />
                 <Route path="*" element={<div>404 Page not found</div>} />
-            </ Routes>
+            </Routes>
         </BrowserRouter>
     )
 

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
-import './Styles.css'
+import '../styles/Styles.css';
+import {Link} from 'react-router-dom';
 
 const Signup = () => {
     
@@ -39,6 +40,7 @@ const Signup = () => {
                 <input class="inputField" onChange={(e) => setCredentials({...crendentials, password: e.target.value})} type="password" placeholder='Password' name='password' required/>
             </div>
             <button type='submit' onClick={handleLogin}>Create my account</button>
+
         </form>
         </body>
     )
