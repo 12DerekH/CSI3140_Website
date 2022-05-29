@@ -18,3 +18,6 @@ Login page: https://csi3140-website.web.app/login
 Signup page: https://csi3140-website.web.app/signup
 
 Profile page: https://csi3140-website.web.app/profile
+
+\
+Github: https://github.com/12DerekH/CSI3140_Website
