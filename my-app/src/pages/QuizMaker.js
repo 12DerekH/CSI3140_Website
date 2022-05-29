@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
 import '../styles/Main.css'
-import {Link} from 'react-router-dom';
 
 const Main = () => {
     
