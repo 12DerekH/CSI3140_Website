@@ -9,12 +9,12 @@ Marc WU #300205869
 \
 Current pages:
 
-Main page: http://localhost:3000/
+Main page: https://csi3140-website.web.app/
 
-Quiz creation page: http://localhost:3000/maker
+Quiz creation page: https://csi3140-website.web.app/maker
 
-Login page: http://localhost:3000/login
+Login page: https://csi3140-website.web.app/login
 
-Signup page: http://localhost:3000/signup
+Signup page: https://csi3140-website.web.app/signup
 
-Profile page: http://localhost:3000/profile
+Profile page: https://csi3140-website.web.app/profile
