@@ -3,6 +3,10 @@
     font-size: 35px;
 }
 
+body{
+  background-color: #DFCFBE;
+}
+
 .container {
     margin-left: 150%;
     padding: 40px;
