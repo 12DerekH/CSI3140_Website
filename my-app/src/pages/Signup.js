@@ -22,7 +22,7 @@ const Signup = () => {
     return (
         <body>
         <form>
-            <h1>Signup</h1>
+            <h1 class="logintitle">Signup</h1>
             <div class="input">
                 <label>Email</label>
                 <input class="inputField" onChange={(e) => setCredentials({...crendentials, email: e.target.value})} type="text" placeholder='Email' name='email' required/>
