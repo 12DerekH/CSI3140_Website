@@ -36,10 +36,47 @@ const Question = (props) => {
 
     const saveQuestions = () => {
         {/* create txt file */}
+        let questionOutput = "Quiz questions:\n";
+        let counter = 1
+
+        for(let a of questions) {
+            let temp = counter + ": " + a.question + "\n"     
+            let temp2 = questionOutput.concat(temp)
+            questionOutput = temp2
+            counter++
+        }
+
+        let temp = questionOutput.concat("Answers:\n")
+        questionOutput = temp
+        counter = 1
+
+        for(let b of questions) {
+            let temp = counter + ": " + b.answer + "\n"     
+            let temp2 = questionOutput.concat(temp)
+            questionOutput = temp2
+            counter++
+        }
+
+
+        console.log(questionOutput);
+/*
+
+        const element = document.createElement("a");
+        const file = new Blob([questionOutput], {
+          type: "text/plain"
+        });
+        element.href = URL.createObjectURL(file);
+        element.download = "myFile.txt";
+        document.body.appendChild(element);
+        element.click();
+*/
         // fs.writeFile('questions.txt', questions, (err) => { if (err) throw err; })
     }
 
-    return <div> {elements} <input type="button" onClick={saveQuestions()} value="Save"/> </div>
+    return (<div>
+            <div> {elements} </div>
+            <input type="button" onClick={saveQuestions} value="Save"/>
+            </div>)
 
 }
 
