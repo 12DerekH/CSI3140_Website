@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 const Question = (props) => {
 
     const number = parseInt(props.numberOfQuestions);
+    const name = (props.quizName);
     const [questions, setQuestions] = useState([Array(number)]);
 
     useEffect(() => {
@@ -36,41 +37,46 @@ const Question = (props) => {
 
     const saveQuestions = () => {
         {/* create txt file */}
-        let questionOutput = "Quiz questions:\n";
+        let questionOutput = name + " questions:\n\n";
+        let answerOutput = name + " answers:\n\n"
         let counter = 1
 
         for(let a of questions) {
-            let temp = counter + ": " + a.question + "\n"     
+            let temp = counter + ": " + a.question + "\n\n"     
             let temp2 = questionOutput.concat(temp)
             questionOutput = temp2
             counter++
         }
 
-        let temp = questionOutput.concat("Answers:\n")
-        questionOutput = temp
         counter = 1
 
         for(let b of questions) {
-            let temp = counter + ": " + b.answer + "\n"     
-            let temp2 = questionOutput.concat(temp)
-            questionOutput = temp2
+            let temp = counter + ": " + b.answer + "\n\n"     
+            let temp2 = answerOutput.concat(temp)
+            answerOutput = temp2
             counter++
         }
 
-
         console.log(questionOutput);
-/*
+        console.log(answerOutput)
 
         const element = document.createElement("a");
         const file = new Blob([questionOutput], {
           type: "text/plain"
         });
         element.href = URL.createObjectURL(file);
-        element.download = "myFile.txt";
+        element.download = name + " questions" + ".txt";
         document.body.appendChild(element);
         element.click();
-*/
-        // fs.writeFile('questions.txt', questions, (err) => { if (err) throw err; })
+
+        const element2 = document.createElement("a");
+        const file2 = new Blob([answerOutput], {
+          type: "text/plain"
+        });
+        element.href = URL.createObjectURL(file2);
+        element.download = name + " answers" + ".txt";
+        document.body.appendChild(element2);
+        element.click();
     }
 
     return (<div>

@@ -41,7 +41,7 @@ const Main = () => {
                 <a href="/"><img src="https://images.cooltext.com/5603665.png" width="291" height="95" alt="Quizzle" /></a>
                 <form className="container">
                     <h3>Please provide your questions</h3>
-                    <Question numberOfQuestions={quizvalues.qamount} />
+                    <Question numberOfQuestions={quizvalues.qamount} quizName={quizvalues.name} />
                 </form>
             </div>
         )
