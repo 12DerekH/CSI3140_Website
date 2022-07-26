@@ -5,6 +5,7 @@ import Signup from './pages/Signup'
 import Main from './pages/Main'
 import Profile from './pages/Profile';
 import QuizMaker from './pages/QuizMaker';
+import Portal from './pages/Portal';
 
 const PageRoutes = () => {
 
@@ -13,6 +14,7 @@ const PageRoutes = () => {
             <Routes>
                 <Route exact path="/login" element={<Login/>} />
                 <Route exact path="/signup" element={<Signup/>} />
+                <Route exact path="/portal" element={<Portal/>} />
                 <Route exact path="/" element={<Main/>} />
                 <Route exact path="/profile" element={<Profile/>} />
                 <Route exact path="/maker" element={<QuizMaker/>} />
