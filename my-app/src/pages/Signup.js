@@ -27,7 +27,7 @@ const Signup = () => {
     function isValidEmail(email) {return /\S+@\S+\.\S+/.test(email);}
 
     return (
-        <div>
+        <div className='signup'>
             <a href="/"><img src="https://images.cooltext.com/5603665.png" width="291" height="95" alt="Quizzle" /></a>
             <body>
             <form>

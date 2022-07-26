@@ -4,7 +4,7 @@ const Portal = () => {
 
     return (
         <div> 
-            Welcome to the portal!
+            <h1>Welcome to the portal!</h1>
         </div>
     )
 }

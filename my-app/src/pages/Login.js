@@ -19,11 +19,11 @@ const Login = () => {
             navigate("/portal");
         }
     };
-
+    
     function isValidEmail(email) {return /\S+@\S+\.\S+/.test(email);}
     
     return (
-        <div>
+        <div className='login'>
             <a href="/"><img src="https://images.cooltext.com/5603665.png" width="291" height="95" alt="Quizzle" /></a>
             <body class="loginbody">
                 <form class="loginform">
