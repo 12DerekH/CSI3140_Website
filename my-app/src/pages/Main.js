@@ -10,9 +10,6 @@ const Main = () => {
     const handleSubmit = (event) => {
         setCode(event.target.value);
         event.preventDefault();
-
-        //Look for quiz matching quiz code
-        console.log(quizcode)
       }
 
     return (

@@ -6,7 +6,6 @@ import '../styles/Main.css'
 const Main = () => {
     
     const [quizvalues, setName] = useState({ name: '', code: '', qamount: '', question: false});
-    const questions = [];
     const handleSubmit = () => {
         
         // Error handling
