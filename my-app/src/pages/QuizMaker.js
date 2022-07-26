@@ -39,8 +39,8 @@ const Main = () => {
         return(
             <div>
                 <a href="/"><img src="https://images.cooltext.com/5603665.png" width="291" height="95" alt="Quizzle" /></a>
-                <h1>Please provide your questions</h1><br/>
                 <form className="container">
+                    <h3>Please provide your questions</h3>
                     <Question numberOfQuestions={quizvalues.qamount} />
                 </form>
             </div>

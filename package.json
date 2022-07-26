@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "rn-nodeify": "^10.3.0"
+  }
+}
