@@ -4,34 +4,40 @@ import '../styles/Main.css'
 
 const Main = () => {
     
-    const [quizvalues, setName] = useState({ name: '', code: '', qamount: ''});
-
-    const handleName = (event) => {
-        setName(event.target.value);
-        event.preventDefault();
-
-        //Look for quiz matching quiz code
-        console.log("quiz name is " + quizvalues.name);
-      }
-
-      const handleSubmit = () => {
+    const [quizvalues, setName] = useState({ name: '', code: '', qamount: '', question: false});
+    const handleSubmit = () => {
         //Check to see if all fields are filled in
-        console.log(quizvalues.name+","+quizvalues.code+","+quizvalues.qamount);
-      }
+        console.log(quizvalues.name+"," + quizvalues.code+"," + quizvalues.qamount);
+    }
 
-    return (
+    if(!quizvalues.question) {
+        return (
+            <div>
+                <a href="/"><img src="https://images.cooltext.com/5603665.png" width="291" height="95" alt="Quizzle" /></a>
+                <form className="container"> 
+                    <h1>Create a quiz</h1><br/>
+
+                    <label>Enter the quiz name: </label>
+                    <input className="info" onChange={(e) => setName({...quizvalues, name: e.target.value, question: true})} type="text" placeholder="Quiz name" />
+
+                    <label>How many questions does the quiz have: </label>
+                    <input className="info" onChange={(e) => setName({...quizvalues, qamount: e.target.value, question: true})} type="text" placeholder="Number of questions" />
+
+                    <input onClick={handleSubmit} type="button" value="Submit" />
+                </form>
+
+            </div>
+        )
+    } else {
         <div>
-            <a href="/"><img src="https://images.cooltext.com/5603665.png" width="291" height="95" alt="Quizzle" /></a>
-            <form class="container"> 
-                <h1>Create a quiz</h1><br/>
-                <label>Enter the quiz name: </label>
-                <input class="info" onChange={handleName} type="text" placeholder="Quiz name" />
-                <label>How many questions does the quiz have: </label>
-                <input class="info" onChange={handleName} type="text" placeholder="Quiz name" />
-                <button type='submit' onClick={handleSubmit}>Start</button>
-            </form>
+                <a href="/"><img src="https://images.cooltext.com/5603665.png" width="291" height="95" alt="Quizzle" /></a>
+                <form className="container"> 
+                    <h1>Enter your questions</h1><br/>
+                </form>
+
         </div>
-    )
+    }
+        
 
 }
 

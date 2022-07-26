@@ -3,8 +3,8 @@ import '../styles/Styles.css'
 const Portal = () => {
 
     return (
-        <div class="container"> 
-                
+        <div> 
+            Welcome to the portal!
         </div>
     )
 }

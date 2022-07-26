@@ -11,13 +11,9 @@ const Login = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        let databody  ={
-            "email": crendentials.email,
-            "password": crendentials.password
-        }
         if(!isValidEmail(crendentials.email)) {
             window.alert("Please provide a valid email!");
-        } else if (crendentials.password == '') {
+        } else if (crendentials.password === '') {
             window.alert("Please provide a valid password!");
         } else {
             navigate("/portal");

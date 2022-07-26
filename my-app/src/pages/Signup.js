@@ -11,19 +11,13 @@ const Signup = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        let databody  ={
-            "email": crendentials.email,
-            "password": crendentials.password,
-            "firstName": crendentials.firstName,
-            "lastName": crendentials.lastName
-        }
         if(!isValidEmail(crendentials.email)) {
             window.alert("Please provide a valid email!");
-        } else if (crendentials.firstName == '') {
+        } else if (crendentials.firstName === '') {
             window.alert("Please provide a valid first name!");
-        } else if (crendentials.lastName == '') {
+        } else if (crendentials.lastName === '') {
             window.alert("Please provide your last name");
-        } else if (crendentials.password == '') {
+        } else if (crendentials.password === '') {
             window.alert("Please provide your password");
         } else {
             navigate("/login");
@@ -37,7 +31,7 @@ const Signup = () => {
             <a href="/"><img src="https://images.cooltext.com/5603665.png" width="291" height="95" alt="Quizzle" /></a>
             <body>
             <form>
-                <h1 class="logintitle">Signup</h1>
+                <h1 className="logintitle">Signup</h1>
                 <div class="input">
                     <label>Email</label>
                     <input class="inputField" onChange={(e) => setCredentials({...crendentials, email: e.target.value})} type="text" placeholder='Email' name='email' required/>
