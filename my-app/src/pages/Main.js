@@ -22,7 +22,8 @@ const Main = () => {
             <form class="container"> 
                 <h1>Access a quiz</h1><br/>
                 <input class="info" type="text" placeholder="Quiz code" />
-                <button type='submit' onClick={handleSubmit}>Start</button>
+                <button type='submit' onClick={handleSubmit}>Start</button> <br/>
+                <Link class="maker" exact to='/maker'>Link to quiz creation while there is no backend</Link>
             </form>
         </div>
     )
