@@ -26,20 +26,20 @@ const Login = () => {
         <div>
             <a href="/"><img src="https://images.cooltext.com/5603665.png" width="291" height="95" alt="Quizzle" /></a>
             <body class="loginbody">
-            <form class="loginform">
-                <h1 class="logintitle">Login</h1>
-                <div class="input">
-                    <label>Email</label>
-                    <input class="inputField" onChange={(e) => setCredentials({...crendentials, email: e.target.value})} type="text" placeholder='Enter email' name='email' required/>
-                </div>
-                <div class="input">
-                    <label>Password</label>
-                    <input class="inputField" onChange={(e) => setCredentials({...crendentials, password: e.target.value})} type="password" placeholder='Enter password' name='password' required/>
-                </div>
-                <button type='submit' onClick={handleLogin}>Login</button>
-                <br></br>
-                <Link exact to='/signup'>Dont have an account? Sign up here</Link>
-            </form>
+                <form class="loginform">
+                    <h1 class="logintitle">Login</h1>
+                    <div class="input">
+                        <label>Email</label>
+                        <input class="inputField" onChange={(e) => setCredentials({...crendentials, email: e.target.value})} type="text" placeholder='Enter email' name='email' required/>
+                    </div>
+                    <div class="input">
+                        <label>Password</label>
+                        <input class="inputField" onChange={(e) => setCredentials({...crendentials, password: e.target.value})} type="password" placeholder='Enter password' name='password' required/>
+                    </div>
+                    <button type='submit' onClick={handleLogin}>Login</button>
+                    <br></br>
+                    <Link exact to='/signup'>Dont have an account? Sign up here</Link>
+                </form>
             </body>
         </div>
     )
